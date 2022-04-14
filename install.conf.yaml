@@ -6,5 +6,6 @@
 
 - link:
     ~/.zshrc: zsh/.zshrc
+    ~/.gitconfig: git/.gitconfig
     ~/.config/starship.toml: starship/starship.toml
     ~/.config/nvim/lua/custom: nvchad/custom
