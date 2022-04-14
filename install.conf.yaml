@@ -6,3 +6,4 @@
 
 - link:
     ~/.zshrc: zsh/.zshrc
+    ~/.config/nvim/lua/custom: nvchad/custom
