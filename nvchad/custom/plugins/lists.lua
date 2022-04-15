@@ -19,5 +19,11 @@ return {
             })
         end,
     },
+
+    {
+        "simrat39/symbols-outline.nvim",
+    },
+
+    -- {},
 }
 

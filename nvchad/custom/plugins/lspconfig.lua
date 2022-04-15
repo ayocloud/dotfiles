@@ -12,7 +12,7 @@ end
 local function lsp_config_sumneko_lua(attach, capabilities)
     local lspconfig = require("lspconfig")
 
-    local sumneko_root_path = "~/.lsp/sumneko_lua"
+    local sumneko_root_path = "/root/.lsp/sumneko_lua"
     local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 
     -- Make runtime files discoverable to the server
@@ -59,7 +59,7 @@ end
 
 M.setup_lsp = function(attach, capabilities)
     lsp_config_clangd(attach, capabilities)
-    -- lsp_config_sumneko_lua(attach, capabilities)
+    lsp_config_sumneko_lua(attach, capabilities)
 end
 
 return M
