@@ -19,6 +19,11 @@ if command -v "exa" >/dev/null 2>&1; then
     alias la='exa --git --group-directories-first --all --color=always --time-style=long-iso'
     alias ll='exa --git --group-directories-first --color=always --time-style=long-iso -l'
     alias lla='exa --git --group-directories-first --all --color=always --time-style=long-iso -l'
+else
+    alias ls='ls --color'
+    alias la='ls --color -a'
+    alias ll='ls --color -l'
+    alias lla='ls --color -a -l'
 fi
 
 set -o emacs
