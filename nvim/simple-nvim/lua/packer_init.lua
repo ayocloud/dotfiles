@@ -44,6 +44,18 @@ return packer.startup(function(use)
   -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'nvim-telescope/telescope-project.nvim',
+    config = function()
+      require'telescope'.extensions.project.project{}
+    end
+  }
+
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
 
