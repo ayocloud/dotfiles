@@ -58,6 +58,16 @@ return packer.startup(function(use)
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } },
+        config = function()
+            require('telescope').setup({
+                defaults = {
+                    layout_strategy = 'vertical',
+                    layout_config = {
+                        vertical = { width = 0.7 },
+                    },
+                },
+            })
+        end,
     })
 
     use({
