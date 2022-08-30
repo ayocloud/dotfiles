@@ -23,9 +23,6 @@ map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
--- Map Esc to kk
-map('i', 'kk', '<Esc>')
-
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
 
@@ -66,6 +63,7 @@ map('n', '<leader>z', ':TagbarToggle<CR>') -- open/close
 
 map('n', '<leader>gd', ':Telescope lsp_definitions<CR>')
 map('n', '<leader>gr', ':Telescope lsp_references<CR>')
+map('n', '<leader>gs', ':Telescope lsp_document_symbols<CR>')
 map('n', '<leader>fo', ':Telescope oldfiles<CR>')
 map('n', '<leader>fg', ':Telescope live_grep<CR>')
 map('n', '<leader>ff', ':Telescope find_files<CR>')
