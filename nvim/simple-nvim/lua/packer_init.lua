@@ -132,6 +132,10 @@ return packer.startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons' },
     })
 
+    use {"akinsho/toggleterm.nvim", tag = 'v2.2.0', config = function()
+        require("toggleterm").setup()
+    end}
+
     -- git labels
     use({
         'lewis6991/gitsigns.nvim',

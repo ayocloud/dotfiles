@@ -50,8 +50,13 @@ map('n', '<leader>q', ':qa!<CR>')
 -----------------------------------------------------------
 
 -- Terminal mappings
-map('n', '<C-t>', ':Term<CR>', { noremap = true }) -- open
-map('t', '<Esc>', '<C-\\><C-n>') -- exit
+map('n', '<leader>tnf', ':ToggleTerm direction=float<CR>')
+map('n', '<leader>tnh', ':ToggleTerm size=20 direction=horizontal<CR>')
+map('n', '<leader>tnv', ':ToggleTerm size=80 direction=vertical<CR>')
+map('n', '<leader>tsc', ':ToggleTermSendCurrentLine<CR>')
+map('v', '<leader>tsv', ':ToggleTermSendVisualLines<CR>')
+map('v', '<leader>tsS', ':ToggleTermSendVisualSelection<CR>')
+map('t', '<C-j>', [[<C-\><C-n>]])
 
 -- NvimTree
 map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
@@ -67,3 +72,5 @@ map('n', '<leader>gs', ':Telescope lsp_document_symbols<CR>')
 map('n', '<leader>fo', ':Telescope oldfiles<CR>')
 map('n', '<leader>fg', ':Telescope live_grep<CR>')
 map('n', '<leader>ff', ':Telescope find_files<CR>')
+
+map('n', '<leader>gid', ':Gitsigns diffthis<CR>')
