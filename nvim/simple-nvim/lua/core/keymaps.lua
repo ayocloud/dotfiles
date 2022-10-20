@@ -13,7 +13,6 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
-
 map('n', '<leader> ', ':Telescope<CR>')
 
 map('n', '<leader>ff', ':Telescope find_files<CR>')
