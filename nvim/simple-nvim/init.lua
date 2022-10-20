@@ -1,22 +1,17 @@
---[[
+vim.defer_fn(function()
+    pcall(require, 'impatient')
+end, 0)
 
-Neovim init file
-Version: 0.62.0 - 2022/06/07
-Maintainer: brainf+ck
-Website: https://github.com/brainfucksec/neovim-lua
+local fn = vim.fn
+local tools = require('core.tools')
+local list = require('plugins.list')
 
---]]
+local status, packer = tools.get_packer()
+if not status then
+    return
+else
+    packer.startup(list)
+end
 
--- Import Lua modules
-require('packer_init')
-require('core/options')
-require('core/autocmds')
-require('core/keymaps')
-require('core/colors')
-require('core/statusline')
-require('plugins/nvim-tree')
-require('plugins/indent-blankline')
-require('plugins/nvim-cmp')
-require('plugins/nvim-lspconfig')
-require('plugins/nvim-treesitter')
-require('plugins/alpha-nvim')
+require('core.keymaps')
+require('plugins.config')

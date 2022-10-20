@@ -1,7 +1,3 @@
------------------------------------------------------------
--- Define keymaps of Neovim and installed plugins.
------------------------------------------------------------
-
 local function map(mode, lhs, rhs, opts)
     local options = { noremap = true, silent = true }
     if opts then
@@ -10,67 +6,18 @@ local function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Change leader to a comma
 vim.g.mapleader = ' '
 
------------------------------------------------------------
--- Neovim shortcuts
------------------------------------------------------------
-
--- Disable arrow keys
-map('', '<up>', '<nop>')
-map('', '<down>', '<nop>')
-map('', '<left>', '<nop>')
-map('', '<right>', '<nop>')
-
--- Clear search highlighting with <leader> and c
-map('n', '<leader>c', ':nohl<CR>')
-
--- Change split orientation
-map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
-map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
-
--- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
--- Reload configuration without restart nvim
-map('n', '<leader>r', ':so %<CR>')
 
--- Fast saving with <leader> and s
-map('n', '<leader>s', ':w<CR>')
+map('n', '<leader> ', ':Telescope<CR>')
 
--- Close all windows and exit from Neovim with <leader> and q
-map('n', '<leader>q', ':qa!<CR>')
-
------------------------------------------------------------
--- Applications and Plugins shortcuts
------------------------------------------------------------
-
--- Terminal mappings
-map('n', '<leader>tnf', ':ToggleTerm direction=float<CR>')
-map('n', '<leader>tnh', ':ToggleTerm size=20 direction=horizontal<CR>')
-map('n', '<leader>tnv', ':ToggleTerm size=80 direction=vertical<CR>')
-map('n', '<leader>tsc', ':ToggleTermSendCurrentLine<CR>')
-map('v', '<leader>tsv', ':ToggleTermSendVisualLines<CR>')
-map('v', '<leader>tsS', ':ToggleTermSendVisualSelection<CR>')
-map('t', '<C-j>', [[<C-\><C-n>]])
-
--- NvimTree
-map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
-map('n', '<leader>f', ':NvimTreeRefresh<CR>') -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>') -- search file
-
--- Tagbar
-map('n', '<leader>z', ':TagbarToggle<CR>') -- open/close
-
-map('n', '<leader>gd', ':Telescope lsp_definitions<CR>')
-map('n', '<leader>gr', ':Telescope lsp_references<CR>')
-map('n', '<leader>gs', ':Telescope lsp_document_symbols<CR>')
-map('n', '<leader>fo', ':Telescope oldfiles<CR>')
-map('n', '<leader>fg', ':Telescope live_grep<CR>')
 map('n', '<leader>ff', ':Telescope find_files<CR>')
 
-map('n', '<leader>gid', ':Gitsigns diffthis<CR>')
+map('n', '<leader>m', ':Legendary<CR>')
+
+map('v', '<leader>tsS', ':ToggleTermSendVisualSelection<CR>')
